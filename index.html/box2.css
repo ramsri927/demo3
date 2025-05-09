@@ -1,0 +1,215 @@
+.container{
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+  }
+  .cont {
+  
+    position: relative;
+    width: 300px;
+    height: 400px;
+    /* display: flex; */
+    background-color:white ;
+    }
+    
+  
+    
+    .cont > h1 {
+      text-align: center;
+      color: hsl(0, 0%, 5%);
+      font-size: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    
+    .item {
+      position: absolute;
+      width: 45%;
+      min-width: 100px;
+      padding: 10px 10px 10px 10px;  	
+      /* background: #fff; */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 8px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    
+    .item1 { top: 50px; left: 20px; }
+    .item2 { top: 50px; right: 10px; }
+    .item3 { bottom: 35px; left: 20px; }
+    .item4 { bottom: 35px; right: 10px; }
+    .item5 {
+      position: absolute; 
+    }
+    .item5{
+      bottom: 10px;
+      left: 10px;
+    }
+  
+  
+    
+    .item h1 {
+      font-size: 1cmS;
+      color: #d32f2f;
+      margin: 0 0 1cqb 0;
+    }
+    
+    .item img {
+      width: 80px;
+      height: 60px;
+      /* object-fit: cover; */
+      border-radius: 5px;
+      margin-bottom: 8px;
+      /* border: 1px solid #eee; */
+    }
+    
+    .item p {
+      font-size: 12px;
+      line-height: 18px;
+      color: #555;
+      margin: 0;
+    }
+  
+    
+    
+    .cont1 {
+      width: 300px;
+      height: 400px;
+      background-color:white;
+      position: relative; 
+    }
+    
+    .cont1 > h1 {
+      text-align: center;
+      color: hsl(0, 0%, 5%);
+      font-size: 15px;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+    .png {
+        position: absolute;
+        width: 130px;
+        height: 140px;
+        padding: 14px 10px 10px 10px;  	
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        border-radius: 12px;
+        box-sizing: border-box;
+        text-align: center;
+        background: wh;
+      }
+      
+      .png1 { top: 50px; left: 10px; }
+      .png2 { top: 50px; right: 10px; }
+      .png3 { bottom: 30px; left: 10px; }
+      .png4 { bottom: 30px; right: 10px; }
+      .png5 {
+        position: absolute;
+      }
+      .png5{
+        bottom: 10px;
+        left: 10px;
+      }
+      
+      
+      .png img {
+        width: 80px;
+        height: 80px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+      }
+      
+      .png p {
+        font-size: 12px;
+        line-height: 18px;
+        color: #555;
+        margin: 0;
+      }
+        
+    
+    
+    
+    
+    
+      .cont3{
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        /* margin-top: 10px; */
+      gap: 10px;
+      position: relative;
+      }
+      .cont3 > h1 {
+        text-align: center;
+        color: hsl(0, 0%, 5%);
+        font-size: 20px;
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+      }
+      .photo{
+        position: absolute;
+        width: 130px;
+        height: 140px;
+        padding: 14px 10px 10px 10px;  	
+        box-shadow: 0 2px 8px rgba(249, 3, 3, 0.07);
+        border-radius: 12px;
+        box-sizing: border-box;
+        text-align: center;
+        background:white;
+      }
+    
+      
+      .photo1 { top: 4cap; left: 20px; }
+      .photo2 { top: 4cap; right: 10px; }
+      .photo3{ bottom: 30px; left: 10px; }
+      .photo4 { bottom: 30px; right: 10px; }
+    .photo5{
+      position: absolute;
+    
+    }
+    .photo5{ bottom: 10px;
+       left: 10px; }
+    
+    .photo img{
+      width: 80px;
+      height: 80px;
+      border-radius:8px;
+    }
+    .photo p {
+      font-size: 12px;
+      line-height: 18px;
+      color: #555;
+      margin: 0;
+    }
+      
+    
+    
+    .cont4{
+      width: 400px;
+      height: 150px;
+      background-color: white;
+      position: relative;
+    }
+    .sing{
+      position: absolute;
+    }
+    .sing1{
+      top: 5px;
+      left: 5px;
+    }
+    .sing2{
+      background-color:yellow;
+      bottom: 0;
+      right: 200px;
+    
+    }
+    .button {
+      width: 50px;
+      height: 20px;
+    }
+    .cont5 img{
+      position: absolute;
+
+    }
+    .contimg{
+      bottom: -80px;
+    }

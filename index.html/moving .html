@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Image Slider</title>
+  <style>
+    body {
+      background: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .slider-container {
+      background: #111;
+      padding: 24px 32px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .slider-btn {
+      background: #444;
+      color: #fff;
+      border: none;
+      font-size: 2rem;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .slider-btn:hover {
+      background: #666;
+    }
+    .slider-img {
+      width: 260px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.25);
+      background: #333;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <button class="slider-btn" id="prevBtn">&lt;</button>
+    <img class="slider-img" id="sliderImage" src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=400&q=80" alt="Movie">
+    <button class="slider-btn" id="nextBtn">&gt;</button>
+  </div>
+
+  <script>
+    // Array of image URLs
+    const images = [
+      "https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80"
+    ];
+    let current = 0;
+    const imgElement = document.getElementById('sliderImage');
+    document.getElementById('prevBtn').onclick = function() {
+      current = (current - 1 + images.length) % images.length;
+      imgElement.src = images[current];
+    };
+    document.getElementById('nextBtn').onclick = function() {
+      current = (current + 1) % images.length;
+      imgElement.src = images[current];
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Footer Example</title>
+  <style>
+    footer {
+  background: #2874f0;
+  color: #fff;
+  padding: 40px 0 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+.footer-col h4 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.footer-col a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: #ffd700;
+}
+.footer-social a {
+  margin-right: 12px;
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: #ffd700;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 12px 0 0 0;
+  font-size: 14px;
+  color: #e0e0e0;
+  border-top: 1px solid #ddd;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer-col {
+    margin-bottom: 30px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>ShopEasy</h4>
+        <p>Your one-stop shop for all your needs. Fast delivery, best prices!</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop Now</h4>
+        <a href="#">Collections</a>
+        <a href="#">Trending</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Cart</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa fa-map-marker"></i> 123 Main St, City, Country</p>
+        <p><i class="fa fa-phone"></i> +91 12345 67890</p>
+        <p><i class="fa fa-envelope"></i> support@shopeasy.com</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-like Navbar</title>
+    <link rel="stylesheet" href="box.css">
+    <!-- <link rel="stylesheet" href="box2.css"> -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6f7;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #0f1111;
+            gap: 10px;
+            padding: 12px 16px;
+        }
+        .logo img {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        .logo img:hover {
+            border-color: #ff9900;
+        }
+        .address {
+            color: #fff;
+            background: #232f3e;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border:2px solid transparent ;
+            font-size: 16px;
+        }
+        .address:hover{
+            border-color: #ff9900;
+    
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex: 2;
+            gap: 2px;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 4px;
+    
+        }
+        .search-bar select,
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-size: 15px;
+        }
+        .search-bar input {
+            flex: 1;
+        }
+        .search-bar select {
+            background: #f3f3f3;
+        }
+        .country-select {
+            margin-left: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 15px;
+        }
+        /* Second row styles */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: #63094a;
+            padding: 10px 16px;
+        }
+        .nav-links span,
+        .nav-links select {
+            color: #fff;
+            font-size: 15px;
+        
+        }
+        .nav-links select {
+            color: #232f3e;
+            background: #fff;
+            border-radius: 2px;
+            padding: 4px 50px;
+        }
+        .nav-links span:hover,
+        .nav-links select:hover {
+            text-decoration: underline;
+        }
+        .card-container{
+        display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 10px;
+  margin-left: 20px;
+  justify-content: center;
+
+    }
+    .product-card {
+      background: #efe8e8;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 10px;
+      text-align: center;
+    }
+    .product-card img {
+      width: 280px;
+      height: 400px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .star-rating .fa {
+      color: #ffc107;
+      margin: 0 2px;
+    }
+    .star-rating .fa.fa-star-o {
+      color: #ddd;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      color: #27ae60;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+    .add-to-cart-btn {
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .add-to-cart-btn:hover {
+      background: #219150;
+    }
+
+    .product-card1 {
+      background: #dcd1d1;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 10px;
+      text-align: center;
+    }
+    .product-card1 img {
+      width: 280px;
+      height: 400px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .product-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .star-rating1 .fa {
+      color: #ffc107;
+      margin: 0 2px;
+    }
+    .star-rating1 .fa.fa-star-o {
+      color: #ddd;
+    }
+    .product-price {
+      font-size: 1.1rem;
+      color: #27ae60;
+      font-weight: bold;
+      margin: 12px 0;
+    }
+    .add-to-cart-btn {
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .add-to-cart-btn:hover {
+      background: #219150;
+    }
+       
+     
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Logo">
+        </div>
+        <div class="address">Address</div>
+        <div class="search-bar">
+            <select>
+                <option>All Categories</option>
+                <option>Books</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+            </select>
+            <input type="text" placeholder="Search Amazon">
+        </div>
+        <select class="country-select">
+            <option>India</option>
+            <option>America</option>
+            <option>China</option>
+        </select>
+    </div>
+    <!-- Navigation Links -->
+    <div class="nav-links">
+        <span>All</span>
+        <select>
+            <option>Fresh</option>
+        </select>
+        <span>MxPlayer</span>
+        <span>Sell</span>
+        <span>Bestsellers</span>
+        <span>Today's Deals</span>
+        <span>Mobile</span>
+        <select>
+            <option>Prime</option>
+        </select>
+    </div>
+    <div class="card-container">
+        <div class="product-card">
+          <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-2._SY116_CB794985839_.jpg" alt="Mobile Phone">
+          <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+          <div class="star-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-o"></span>
+            <span style="margin-left:8px; color:#555;">4.0</span>
+          </div>
+          <div class="product-price">₹19,999</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card1">
+          <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+          <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+          <div class="star-rating1">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-o"></span>
+            <span style="margin-left:8px; color:#fff;">4.0</span>
+          </div>
+          <div class="product-price">₹19,999</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card1">
+          <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+          <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+          <div class="star-rating1">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star-o"></span>
+            <span style="margin-left:8px; color:#fff;">4.0</span>
+          </div>
+          <div class="product-price">₹19,999</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product-card1">
+            <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+            <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+            <div class="star-rating1">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star-o"></span>
+              <span style="margin-left:8px; color:#fff;">4.0</span>
+            </div>
+            <div class="product-price">₹19,999</div>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+</div>
+<div class="card-container">
+    <div class="product-card">
+      <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-2._SY116_CB794985839_.jpg" alt="Mobile Phone">
+      <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+      <div class="star-rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star-o"></span>
+        <span style="margin-left:8px; color:#555;">4.0</span>
+      </div>
+      <div class="product-price">₹19,999</div>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product-card1">
+      <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+      <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+      <div class="star-rating1">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star-o"></span>
+        <span style="margin-left:8px; color:#fff;">4.0</span>
+      </div>
+      <div class="product-price">₹19,999</div>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product-card1">
+      <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+      <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+      <div class="star-rating1">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star-o"></span>
+        <span style="margin-left:8px; color:#fff;">4.0</span>
+      </div>
+      <div class="product-price">₹19,999</div>
+      <button class="add-to-cart-btn">Add to Cart</button>
+    </div>
+    <div class="product-card1">
+        <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-4._SY116_CB794985839_.jpg" alt="Mobile Phone">
+        <div class="product-title">realme NARZO N61 (Voyage Blue, 4GB RAM+64GB Storage) 90Hz Eye Comfort Display | IP54 Dust & Water Resistance | 48-Month Fluency | Charger in The Box</div>
+        <div class="star-rating1">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star-o"></span>
+          <span style="margin-left:8px; color:#fff;">4.0</span>
+        </div>
+        <div class="product-price">₹19,999</div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+
+</div>
+</body>
+</html>

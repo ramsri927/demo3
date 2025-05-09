@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-like Navbar</title>
+    <link rel="stylesheet" href="box.css">
+    <!-- <link rel="stylesheet" href="box2.css"> -->
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f6f7;
+            /* overflow-x: hidden; */
+        }
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: #0f1111;
+            gap: 10px;
+            padding: 12px 16px;
+        }
+        .logo img {
+            width: 100px;
+            height: 50px;
+            object-fit: contain;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        .logo img:hover {
+            border-color: #ff9900;
+        }
+        .address {
+            color: #fff;
+            background: #232f3e;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border:2px solid transparent ;
+            font-size: 16px;
+        }
+        .address:hover{
+            border-color: #ff9900;
+    
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            flex: 2;
+            gap: 2px;
+            max-width: 500px;
+            background: #fff;
+            border-radius: 4px;
+    
+        }
+        .search-bar select,
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-size: 15px;
+        }
+        .search-bar input {
+            flex: 1;
+        }
+        .search-bar select {
+            background: #f3f3f3;
+        }
+        .country-select {
+            margin-left: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: none;
+            font-size: 15px;
+        }
+        /* Second row styles */
+        .nav-links {
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 18px;
+            background: #63094a;
+            padding: 10px 16px;
+        }
+        .nav-links span,
+        .nav-links select {
+            color: #fff;
+            font-size: 15px;
+        
+        }
+        .nav-links select {
+            color: #232f3e;
+            background: #fff;
+            border-radius: 2px;
+            padding: 4px 50px;
+        }
+        .nav-links span:hover,
+        .nav-links select:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 10px 8px;
+    }
+    .logo img {
+        width: 80px;
+        height: 40px;
+    }
+    .address {
+        font-size: 14px;
+        padding: 6px 10px;
+        margin-bottom: 4px;
+    }
+    .search-bar {
+        max-width: 100%;
+        width: 100%;
+        margin: 6px 0;
+        flex: 1;
+    }
+    .country-select {
+        margin-left: 0;
+        margin-top: 6px;
+        width: 100%;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 8px 8px;
+        font-size: 14px;
+    }
+    .nav-links span, .nav-links select {
+        font-size: 13px;
+    }
+    .container, .cont, .cont1, .cont3, .cont4, .cont5 {
+        padding: 0 5px;
+        width: 90%;
+        box-sizing: content-box;
+    }
+    .item, .png, .photo {
+        min-width: 200px;
+        max-width: 50%;
+        height: auto;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .footercontainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 8px;
+    }
+    .footer-col, .footer-col1, .footer-col2 {
+        width: 100%;
+    }
+}
+
+       
+     
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Logo">
+        </div>
+        <div class="address">Address</div>
+        <div class="search-bar">
+            <select>
+                <option>All Categories</option>
+                <option>Books</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+            </select>
+            <input type="text" placeholder="Search Amazon">
+        </div>
+        <select class="country-select">
+            <option>India</option>
+            <option>America</option>
+            <option>China</option>
+        </select>
+    </div>
+    <!-- Navigation Links -->
+    <div class="nav-links">
+        <span>All</span>
+        <select>
+            <option>Fresh</option>
+        </select>
+        <span>MxPlayer</span>
+        <span>Sell</span>
+        <span>Bestsellers</span>
+        <span>Today's Deals</span>
+        <span>Mobile</span>
+        <select>
+            <option>Prime</option>
+        </select>
+        <span> New Arrivals</span>
+    </div>
+    <div class="container">
+        
+        <div class="cont">
+            <h1> smartphone</h1>
+            <a href=".//oppo.html">
+            <div class="item item1">
+              <!-- <h1>Heading 1</h1> -->
+              <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116._SY116_CB794985839_.jpg" alt="Image 1">
+              <p>
+Budget | Under ₹10,000</p>
+            </div>
+            </a>
+            <a href="./midrange.html">
+            <div class="item item2">
+              <!-- <h1>Heading 2</h1> -->
+              <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-2._SY116_CB794985839_.jpg" alt="Image 2">
+              <p> Mid-range|₹10,000-₹20,000</p>
+            </div>
+            </a>
+            <a href="./premium.html">
+            <div class="item item3">
+              <!-- <h1>Heading 3</h1> -->
+              <img src="./D238438497_IN_WLD_MayART25_MSO_Adhoc_PC_QC_186x116-2._SY116_CB794985839_.jpg" alt="Image 3">
+              <p>Premium|₹25,000-₹40,000</p>
+            </div>
+            </a>
+            <a href="./ultrapremium.html">
+            <div class="item item4">
+              <!-- <h1>Heading 4</h1> -->
+              <img src="./images.png" alt="Image 4">
+              <p>Ultra premium|Above ₹40,000</p>
+            </div>
+            </a>
+            <!-- <div class="item item5">
+            <a href="./ano.html"> sea all offers</a> -->
+
+          
+          <span class="item5">
+          <a href="./anchor.html"> see all offers</a> 
+          </span>
+          
+</div>
+          <div class="cont1">
+            <h1>Deals on accessories from your top smartphone</h1>
+            <div class="png png1">
+            <img src="./image.png" alt="">
+            <p>Apple | Up to 20%</p>
+            </div>
+            <div class="png png2">
+                <img src="./04A_4._SY116_CB796824331_.jpg" alt="">
+             <p> Samsung| up to 60%off</p> 
+            </div>
+                <div class="png png3">
+                    <img src="./04A_1._SY116_CB796824331_.jpg" alt="">
+                    <p> Oneplus | starting 599</p>
+                </div>
+                    <div class="png png4">
+                        <img src="./04A_2._SY116_CB796824331_.jpg" alt="">
+                  <p> Xiaomio| up to 70% off</p>
+                    </div>
+                    <span class=" png5">
+                        <a href="./ano.html"> see all offers</a> 
+                        </span>
+    
+
+         </div>
+        <div class=" cont3">
+            <h1>Pick up where you left off </h1>
+        <div class="photo photo1">
+            <img src="./517oE-udbWL._AC_SY110_.jpg">
+       <p> hello sriufgdgfg dhjhgdfj</p>
+        </div>
+        <div class="photo photo2">
+            <img src="./415kWNOHUiL._AC_SY110_.jpg">
+       <p> hello sriufgdgfg dhjhgdfj</p>
+        </div>
+        <div class="photo photo3">
+            <img src="./61zbrPd+kwL._AC_SY110_.jpg">
+       <p> hello sriufgdgfg dhjhgdfj</p>
+        </div>
+        <div class="photo photo4">
+            <img src="./41X3b+uMQGL._AC_SY110_.jpg">
+       <p> hello sriufgdgfg dhjhgdfj</p>
+        </div>
+        <span class="photo5">
+                        <a href="./ano.html"> see all offers</a> 
+              
+                    </span>
+                    </div>
+<div class="cont4">
+    <div class="sgin sgin1">
+        <h1> sing in for your best experience</h1>
+        </div>
+        <div class="sgin sgin2">
+        <button class="button">singin</button>
+
+        </div>
+        <div class="cont5">
+            <div class="itemm itemm">
+            <img src="./download (1).jpeg" alt="">
+            </div>
+        </div>
+</div>
+
+
+
+
+      </div>
+      <div class="container">
+        
+        <div class="cont">
+            <h1> Amazon Business</h1>
+    
+            <div class="item item1">
+              <!-- <h1>Heading 1</h1> -->
+              <img src="./eCQC5_186_116_3004._SY116_CB794846988_.jpg" alt="Image 1">
+              <p> Electroincs & Accessories</p>
+            </div>
+            <div class="item item2">
+              <!-- <h1>Heading 2</h1> -->
+              <img src="./eCQC6_186_116_3004._SY116_CB794846988_.jpg" alt="Image 2">
+              <p>    kitchen          appliances products   </p>
+            </div>
+            <div class="item item3">
+              <!-- <h1>Heading 3</h1> -->
+              <img src="./eCQC8_186_116_3004._SY116_CB794846988_.jpg" alt="Image 3">
+              <p> Home & office furniture</p>
+            </div>
+            <div class="item item4">
+              <!-- <h1>Heading 4</h1> -->
+              <img src="./xCQC7_186_116_3004._SY116_CB794846988_.jpg" alt="Image 4">
+              <p>summer appliances products</p>
+            </div>
+            <!-- <div class="item item5">
+            <a href="./ano.html"> sea all offers</a> -->
+
+          
+          <span class="item5">
+          <a href="./anchor.html"> see all offers</a> 
+          </span>
+</div>
+<div class="cont1">
+            <h1>Minimum 50% off | Sports, outdoor & more</h1>
+            <div class="png png1">
+            <img src="./b2C_QC_372x232-5-1x._SY116_CB796724736_.jpg" alt="">
+            <p>sports & fitneess</p>
+            </div>
+            <div class="png png2">
+                <img src="./b3C_QC_372x232-6-1x._SY116_CB796724736_.jpg" alt="">
+             <p> Automotive</p> 
+            </div>
+                <div class="png png3">
+                    <img src="./b4C_QC_372x232-7-1x._SY116_CB796724736_.jpg" alt="">
+                    <p> Tools</p>
+                </div>
+                    <div class="png png4">
+                        <img src="./b5C_QC_372x232-8-1x._SY116_CB796724736_.jpg" alt="">
+                  <p>  Garden & outdoor</p>
+                    </div>
+                    <span class=" png5">
+                        <a href="./ano.html"> see all offers</a> 
+                        </span>
+    
+
+         </div>
+         <div class=" cont3">
+            <h1>Pick up where you left off </h1>
+        <div class="photo photo1">
+            <img src="./c1C_QC_372x232-1-1x._SY116_CB796724737_.jpg">
+       <p>Kitchen essentials</p>
+        </div>
+        <div class="photo photo2">
+            <img src="./c2C_QC_372x232-2-1x._SY116_CB796724736_.jpg">
+       <p> Home decor</p>
+        </div>
+        <div class="photo photo3">
+            <img src="./c3C_QC_372x232-3-1x._SY116_CB796724736_.jpg">
+       <p> Furniture</p>
+        </div>
+        <div class="photo photo4">
+            <img src="./c4C_QC_372x232-4-1x._SY116_CB796724736_.jpg">
+       <p>Home improvement</p>
+        </div>
+        <span class="photo5">
+                        <a href="./ano.html"> sea all offers</a> 
+              
+                    </span>
+                    </div>
+                    <div class="cont1">
+                        <h1>Deals on accessories from your top smartphone</h1>
+                        <div class="png png1">
+                        <img src="./m3.webp" alt="">
+                        <p>Apple | Up to 20%</p>
+                        </div>
+                        <div class="png png2">
+                            <img src="./m105nde_400.webp" alt="">
+                         <p> Samsung| up to 60%off</p> 
+                        </div>
+                            <div class="png png3">
+                                <img src="./m2meu6q_400.webp" alt="">
+                                <p> Oneplus | starting 599</p>
+                            </div>
+                                <div class="png png4">
+                                    <img src="./m4.webp" alt="">
+                              <p> Xiaomio| up to 70% off</p>
+                                </div>
+                                <span class=" png5">
+                                    <a href="./ano.html"> sea all offers</a> 
+                                    </span>
+                
+            
+                     </div>
+        </div>
+        
+  <footer>
+    <div class="footercontainer">
+      <div class="footer-col2">
+        <h4>ShopEasy</h4>
+        <p>Your one-stop shop for all your needs. Fast delivery, best prices!</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Shop Now</h4>
+        <a href="#">Collections</a>
+        <a href="#">Trending</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Cart</a>
+      </div>
+      <div class="footer-col1">
+        <h3>Contact</h3>
+        <p><i class="fa fa-map-marker"></i> 123 Main St, City, Country</p>
+        <p><i class="fa fa-phone"></i> +91 12345 67890</p>
+        <p><i class="fa fa-envelope"></i> support@shopeasy.com</p>
+    
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ShopEasy. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
